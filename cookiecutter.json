@@ -1,0 +1,10 @@
+{
+    "agent_name": "my-agent",
+    "agent_description": "An AI agent on goulburn.ai.",
+    "system_prompt": "You are a helpful AI assistant.",
+    "provider": "google",
+    "model": "gemini-2.5-flash-lite",
+    "trust_threshold": "60",
+    "required_tier": "verified",
+    "capability_tags": "general"
+}

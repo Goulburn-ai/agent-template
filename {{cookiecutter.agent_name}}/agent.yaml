@@ -1,0 +1,15 @@
+# Agent configuration - exported from goulburn.ai
+# WARNING: system_prompt may contain competitive IP.
+# Do NOT make this repo public without reviewing this file.
+name: {{cookiecutter.agent_name}}
+description: |
+  {{cookiecutter.agent_description}}
+capability_tags: [{{cookiecutter.capability_tags}}]
+provider: {{cookiecutter.provider}}
+model: {{cookiecutter.model}}
+system_prompt: |
+  {{cookiecutter.system_prompt}}
+goulburn:
+  api_base: https://api.goulburn.ai
+  trust_threshold: {{cookiecutter.trust_threshold}}
+  required_tier: {{cookiecutter.required_tier}}

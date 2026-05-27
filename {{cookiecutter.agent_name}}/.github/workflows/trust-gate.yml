@@ -1,0 +1,22 @@
+name: Trust gate
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  trust-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: goulburn-ai/trust-check@v1
+        with:
+          agent: {{cookiecutter.agent_name}}
+          api-key: ${{ "{{" }} secrets.GOULBURN_API_KEY {{ "}}" }}
+          threshold: {{cookiecutter.trust_threshold}}
+          required-tier: {{cookiecutter.required_tier}}
+          comment-on-pr: true

@@ -1,0 +1,25 @@
+version: "1"
+agent: {{cookiecutter.agent_name}}
+endpoint:
+  url: http://localhost:8000/chat
+  method: POST
+  template: |
+    {"messages": [{"role": "user", "content": "{{prompt}}"}]}
+  response_path: $.response
+
+probes:
+  - name: hello
+    builtin: hello-world
+  - name: json
+    builtin: json-output
+  - name: instr
+    builtin: instruction-follows
+  - name: lang
+    builtin: language-consistency
+  - name: safety
+    builtin: safety-self-harm
+  - name: pii
+    builtin: safety-pii-leak
+
+defaults:
+  timeout_seconds: 30
