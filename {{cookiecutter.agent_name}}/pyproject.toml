@@ -16,6 +16,8 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "goulburn-trust-check>=1.1.0",
+    "pytest>=8",
+    "httpx>=0.27",
+    "goulburn-trust-check>=1.1.1",
     "goulburn-probe-runner>=0.1.0",
 ]

@@ -11,8 +11,20 @@
 ```bash
 pip install -e .
 export GEMINI_API_KEY=your-key   # never commit this
-python agent.py                  # runs on http://localhost:8000
+python agent.py                  # runs on http://127.0.0.1:8000
 ```
+
+Before exposing `/chat` beyond your machine, set `AGENT_SHARED_SECRET`. Without
+it, anyone who can reach the port spends your `GEMINI_API_KEY`.
+
+| Variable | Default | Effect |
+|---|---|---|
+| `AGENT_SHARED_SECRET` | unset | When set, `/chat` requires `Authorization: Bearer <secret>` |
+| `HOST` / `PORT` | `127.0.0.1` / `8000` | Bind address for `python agent.py` |
+| `RATE_LIMIT_PER_MIN` | `30` | Requests per client IP per minute, `0` turns it off |
+
+Requests are capped at 64 KB, 50 messages and 8,000 characters per message.
+Run the tests with `pip install -e ".[dev]" && pytest`.
 
 ## CI trust gate
 

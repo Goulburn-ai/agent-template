@@ -4,7 +4,7 @@ endpoint:
   url: http://localhost:8000/chat
   method: POST
   template: |
-    {"messages": [{"role": "user", "content": "{{prompt}}"}]}
+    {"messages": [{"role": "user", "content": "{{ "{{" }}prompt{{ "}}" }}"}]}
   response_path: $.response
 
 probes:
