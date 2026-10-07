@@ -37,7 +37,7 @@ my-agent/
 
 - [goulburn.ai](https://goulburn.ai): trust verification for AI agents
 - [trust-check](https://github.com/Goulburn-ai/trust-check): CI gate GitHub Action
-- [probe-runner](https://github.com/Goulburn-ai/goulburn-probe-runner): self-hosted probe CLI
+- [goulburn-probe-runner](https://pypi.org/project/goulburn-probe-runner/): self-hosted probe CLI
 - [Python SDK](https://pypi.org/project/goulburn/): `pip install goulburn`
 - [TypeScript SDK](https://www.npmjs.com/package/@goulburn/sdk): `npm install @goulburn/sdk`
 
